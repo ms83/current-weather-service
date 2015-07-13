@@ -1,14 +1,14 @@
-# DESCRIPTION
-A Python web service, and a Python script which accesses this web service.
-We will build a weather forecast server, and a command line client for it.
+A Python web service and a Python script which accesses this web service.
+Web service access forecat server API to get current weather.
 
-# SETUP
->    sudo easy_install web.py
+## SETUP & DEPENDENCIES
+>    easy_install web.py
 
-# TEST
+## TEST
 >    python test.py
 
-# EXAMPLES
+## EXAMPLES
 >    python weather.py --city='Palma'
+
 >    python weather.py --city='Palma de Mallorca'
 
