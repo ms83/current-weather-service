@@ -5,6 +5,10 @@ Web service that serves current weather in JSON format.
 
 Example:
 curl http://0.0.0.0:8080/api/v1/city/Palma
+
+TODO:
+    Currently webserver is just a proxy of openweathermap API and response 
+    schema should be designed in case we will have to change API/provider.
 """
 
 import web
@@ -34,6 +38,7 @@ class city:
         response = urllib2.urlopen(API_URL.format(urllib.quote(name))).read()
         self.CACHE[name] = (response, now)
         # Forward response as it is.
+        # FIXME (look at pydoc on top of file)
         return response
 
 if __name__ == "__main__":
